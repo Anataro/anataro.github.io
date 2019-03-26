@@ -15,6 +15,15 @@ body {
   /* animation-direction: alternate; */
   /* animation-timing-function: ease-in-out; */
 }
+.box2 {  
+  background: white;
+  width: 1000px;
+  height: 200px;
+  position: relative;
+  animation-name: myanimation;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 
 /* @keyframes myanimation {
   0% {background-color: white; left: 0px; top: 0px; border-radius: 0 0 0 0;}
