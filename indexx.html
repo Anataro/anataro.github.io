@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/bootstrap.min.js" type="text/javascript" rel="script"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    ]
+    <script>
+        $(document).ready(function () {
+
+            $(".filter-button").click(function () {
+                var value = $(this).attr('data-filter');
+
+                if (value == "all") {
+                    //$('.filter').removeClass('hidden');
+                    $('.filter').show('1000');
+                }
+                else {
+                    //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+                    //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+                    $(".filter").not('.' + value).hide('3000');
+                    $('.filter').filter('.' + value).show('3000');
+
+                }
+            });
+
+            if ($(".filter-button").removeClass("active")) {
+                $(this).removeClass("active");
+            }
+            $(this).addClass("active");
+
+        });</script>
+</head>
+
+<body>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      
+   
+
+ 
+
+    .container {
+        width: 100%;
+        display: grid;
+       grid-auto-flow: dense;
+        
+        grid-template:
+            "1fr 1fr 1fr 1fr"33.33vh
+             "1fr 1fr 1fr 1fr"33.33vh
+              "1fr 1fr 1fr 1fr"33.33vh
+              "1fr 1fr 1fr 1fr"33.33vh
+              "1fr 1fr 1fr 1fr"33.33vh
+              "1fr 1fr 1fr 1fr"33.33vh
+              "1fr 1fr 1fr 1fr"33.33vh
+              "1fr 1fr 1fr 1fr"33.33vh
+              "1fr 1fr 1fr 1fr"33.33vh
+              "1fr 1fr 1fr 1fr"33.33vh;
+        grid-gap: 1px;
+    }
+
+    .container .box {
+        position: relative;
+        background: #cccccc;
+    }
+
+    .container .box img,
+    .container .box video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .container .box.a {
+        grid-row: span 2;
+    }
+
+    .container .box.b {
+        grid-row: span 2;
+    }
+
+    .container .box.c {
+        grid-row: span 2;
+
+    }
+
+    .container .box.d {
+        grid-row: span 2;
+    }
+
+    .container .box.e,
+    .container .box.f,
+    .container .box.g,
+    .container .box.h,
+    .container .box.j,
+    .container .box.k,
+    .container .box.l,
+    .container .box.m
+     {
+        grid-row: span 2;
+    }
+    .container .box.r
+    {
+        grid-row: span 2;
+    }
+    .container .box.s
+    {
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+    .container .box.t
+   
+    @media (max-width: 991px) {
+        .container {
+
+            grid-template: "1fr 1fr 1fr"250px "1fr 1fr 1fr"250px "1fr 1fr 1fr"250px "1fr 1fr 1fr"250px "1fr 1fr 1fr"250px;
+
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container {
+
+            grid-template: "1fr 1fr"250px "1fr 1fr"250px "1fr 1fr"250px "1fr 1fr"250px "1fr 1fr"250px "1fr 1fr"250px "1fr 1fr"250px;
+
+        }
+    }
+    </style>
+
+
+
+
+    
+        <div class="row">
+            <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="gallery-title">Gallery</h1>
+            </div>
+
+            <div align="center">
+                <button class="btn btn-default filter-button" data-filter="all">All</button>
+                <button class="btn btn-default filter-button" data-filter="hdpe">HDPE Pipes</button>
+                <button class="btn btn-default filter-button" data-filter="sprinkle">Sprinkle Pipes</button>
+                <button class="btn btn-default filter-button" data-filter="spray">Spray Nozzle</button>
+                <button class="btn btn-default filter-button" data-filter="irrigation">Irrigation Pipes</button>
+            </div>
+            <br />
+
+          
+
+           <div class="container">
+                <div class="box a filter hdpe"><img src="19,5 x 27,5 cm.png" alt=""></div>
+                <div class="box b filter spray"><img src="Afisz NIE JEDZ TEGo TO JEST NA ŚWIĘTA!1.png" alt=""></div>
+                <div class="box c filter spray"><img src="Afisz Pomysłowe mebelki z gąbki.png" alt=""></div>
+                <div class="box d filter spray"><img src="Afisz Śliskie Słowa B1.png" alt=""></div>
+                <div class="box e filter irrigation"><img src="Mural.png" alt=""></div>
+                <div class="box f filter irrigation"><img src="NIE JEDZ TEGo TO JEST NA ŚWIĘTA!1.png" alt=""></div>
+                <div class="box g filter irrigation"><img src="papier firmowy, koperta, wizytówka.png" alt=""></div>
+                <div class="box h filter sprinkle"><img src="Piktogramy.png" alt=""></div>
+                <div class="box i filter sprinkle"><img src="Plansza.png" alt=""></div>
+                <div class="box j filter hdpe"><img src="do druku.png" alt=""></div>
+                <div class="box k filter hdpe"><img src="herbata.png" alt=""></div>
+                <div class="box l filter spray"><img src="Prezentacja płyty.png" alt=""></div>
+                <div class="box m filter spray"><img src="sliskie slowa.png" alt=""></div>
+                <div class="box n filter spray"><img src="Kompozycja1.png" alt=""></div>
+                <div class="box o filter irrigation"><img src="Kompozycja2.png" alt=""></div>
+                <div class="box p filter irrigation"><img src="Kompozycja3.png" alt=""></div>
+                <div class="box r filter irrigation"><img src="Pomysłowe mebelki z gąbki1.png" type="video.mp4" alt=""></div>
+                <div class="box s filter sprinkle"><video autoplay src="Kot w ruchu animacja.mp4"></video></div>
+               
+            </div>
+
+        </div>
+    
+    </section>
+
+</body>
+
+</html>
